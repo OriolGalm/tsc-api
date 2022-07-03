@@ -22,7 +22,7 @@ function nota(nota: number){
 
 elTemps();
 async function elTemps(){
-   /*  let response: any = await fetch('https://www.visualcrossing.com/weather/weather-data-services');
+  /*  let response: any = await fetch('https://www.visualcrossing.com/weather/weather-data-services');
     let comit = await response.json();
     let temps = comit.temp;
     console.log("Temperatura: ", temps); */

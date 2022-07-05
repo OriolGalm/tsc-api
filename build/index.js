@@ -47,7 +47,7 @@ function elTemps() {
         let tempsC = tempsK - 273.15;
         let tempsCelsius = tempsC.toFixed(1);
         let weather = comit.weather[0].description;
-        document.getElementById("temps").innerHTML = weather + " " + tempsCelsius.toString() + "°";
+        document.getElementById("temps").innerHTML = weather + " " + tempsCelsius.toString() + " °C";
         console.log("Temperatura: ", tempsC.toFixed(1) + weather);
     });
 }

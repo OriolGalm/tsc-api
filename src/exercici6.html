@@ -11,25 +11,39 @@
 </head>
 <body>
 
-    <div id="temps"></div>
+    <img id="nuvol" src="media/clipart90480.png">
+    <div id="temps">
+        
+    </div>
       
-    <svg viewBox="-100 0 400 300" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#0F62FE" d="M49.3,-48.6C56.3,-30.4,49.4,-10.4,45.2,11.2C40.9,32.7,39.4,55.7,29.2,60.7C18.9,65.7,-0.1,52.6,-22.2,43.1C-44.3,33.6,-69.7,27.6,-74.1,14.9C-78.6,2.3,-62.2,-17.2,-46.4,-37.3C-30.6,-57.5,-15.3,-78.3,2.9,-80.7C21.1,-83,42.2,-66.7,49.3,-48.6Z" transform="translate(100 100)" />
-      </svg>
+      
+    <svg id="svg1" viewBox="-100 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 900 800" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#8A3FFC" d="M4.1,12C-9.3,25.5,-44.8,36,-49.2,27.6C-53.5,19.3,-26.8,-7.9,-9,-13.1C8.7,-18.3,17.5,-1.6,4.1,12Z" transform="translate(100 100)" />
+          </svg>  
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#8A3FFC" d="M5.8,2.6C1.9,10.1,-10.8,11.8,-13.2,5.2C-15.6,-1.5,-7.8,-16.6,-1.5,-17.4C4.9,-18.3,9.7,-4.9,5.8,2.6Z" transform="translate(100 100)" />
+          </svg>
+        <path fill="#8A3FFC" d="M40.8,-64.5C50.7,-57.1,55.2,-42.2,60.4,-28.3C65.6,-14.4,71.6,-1.6,70,10.1C68.4,21.9,59.3,32.7,50.9,46.3C42.5,59.9,34.9,76.4,24.4,76.3C14,76.2,0.7,59.6,-10.9,50.2C-22.6,40.9,-32.5,38.8,-45,33.8C-57.5,28.7,-72.6,20.7,-74.5,10.4C-76.4,0.2,-65.1,-12.2,-55.4,-22C-45.7,-31.8,-37.7,-39,-28.8,-46.9C-19.8,-54.7,-9.9,-63.2,2.8,-67.5C15.4,-71.8,30.9,-71.9,40.8,-64.5Z" transform="translate(100 100)" />
+    </svg>
+
+    
       
     <div class="col-8 p-4 cardAcudits2">
         <div class="card-body text-center">
-            <h1 class="card-title">Preparat per riure? &#x1F923</h1>
+            <h3 class="card-title">Preparat per riure?</h3>
             <div class="card-text p-4" id="textAcudit"></div>
-            <div class="card-text m-3">
-                <input class="btn btn-secondary" type="button" value="1" onclick="nota(1)">
-                <input class="btn btn-secondary" type="button" value="2" onclick="nota(2)">
-                <input class="btn btn-secondary" type="button" value="3" onclick="nota(3)">
+            <div class="card-text m-1">
+                <img class="emojis" src="media/sad-face.png" onclick="nota(1)">
+                <img class="emojis m-3" src="media/confused.png" onclick="nota(2)">
+                <img class="emojis" src="media/laughing.png" onclick="nota(3)">
             </div>
-            <input class="btn btn-info col-3" type="button" value="Següent acudit" onclick="segAcudit()">
+            <div class="card-text botoExterior">
+                <p onclick="segAcudit()">Següent Acudit</p>
+                <img id="boto" src="media/toppng.com-free-download-yellow-paint-stroke-1142x287.png">
+            </div>
         </div>
     </div>
-    
 
     <script src="../build/index.js"></script>
 </body>

@@ -10,13 +10,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let notaAcudits = [];
 let resposta;
+let canvi = true;
 function segAcudit() {
     return __awaiter(this, void 0, void 0, function* () {
-        let response = yield fetch('https://icanhazdadjoke.com/slack');
-        let comit = yield response.json();
-        resposta = comit.attachments[0].fallback;
-        document.getElementById("textAcudit").innerHTML = resposta;
-        console.log(comit.attachments[0].fallback);
+        if (canvi == true) {
+            let response = yield fetch('https://icanhazdadjoke.com/slack');
+            let comit = yield response.json();
+            resposta = comit.attachments[0].fallback;
+            document.getElementById("textAcudit").innerHTML = resposta;
+            canvi = !canvi;
+        }
+        else {
+            let responseChuck = yield fetch('https://api.chucknorris.io/jokes/random');
+            let comit2 = yield responseChuck.json();
+            resposta = comit2.value;
+            document.getElementById("textAcudit").innerHTML = resposta;
+            canvi = !canvi;
+        }
     });
 }
 function nota(nota) {
@@ -31,9 +41,13 @@ function nota(nota) {
 elTemps();
 function elTemps() {
     return __awaiter(this, void 0, void 0, function* () {
-        /*  let response: any = await fetch('https://www.visualcrossing.com/weather/weather-data-services');
-         let comit = await response.json();
-         let temps = comit.temp;
-         console.log("Temperatura: ", temps); */
+        let response = yield fetch('http://api.openweathermap.org/data/2.5/weather?q=Barcelona,es&appid=bd768209c18b19d3f83a6b1748943738');
+        let comit = yield response.json();
+        let tempsK = comit.main.temp;
+        let tempsC = tempsK - 273.15;
+        let tempsCelsius = tempsC.toFixed(1);
+        let weather = comit.weather[0].description;
+        document.getElementById("temps").innerHTML = weather + " " + tempsCelsius.toString() + "°";
+        console.log("Temperatura: ", tempsC.toFixed(1) + weather);
     });
 }

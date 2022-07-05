@@ -17,3 +17,11 @@ h1{
 .cardAcudits{
     margin-top:20vh;
 }
+.cardAcudits2{
+    position: absolute;
+    top:350px;
+    left: 300px;
+}
+#temps{
+    padding: 10px;
+}

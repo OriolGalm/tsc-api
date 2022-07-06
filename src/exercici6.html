@@ -12,22 +12,25 @@
 <body>
 
     <img id="nuvol" src="media/clipart90480.png">
-    <div id="temps">
-        
+    <div id="temps">     
     </div>
-      
       
     <svg id="svg1" viewBox="-100 0 400 300" xmlns="http://www.w3.org/2000/svg">
         <svg viewBox="0 0 900 800" xmlns="http://www.w3.org/2000/svg">
             <path fill="#8A3FFC" d="M4.1,12C-9.3,25.5,-44.8,36,-49.2,27.6C-53.5,19.3,-26.8,-7.9,-9,-13.1C8.7,-18.3,17.5,-1.6,4.1,12Z" transform="translate(100 100)" />
-          </svg>  
+        </svg>  
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#8A3FFC" d="M5.8,2.6C1.9,10.1,-10.8,11.8,-13.2,5.2C-15.6,-1.5,-7.8,-16.6,-1.5,-17.4C4.9,-18.3,9.7,-4.9,5.8,2.6Z" transform="translate(100 100)" />
-          </svg>
+        </svg>
         <path fill="#8A3FFC" d="M40.8,-64.5C50.7,-57.1,55.2,-42.2,60.4,-28.3C65.6,-14.4,71.6,-1.6,70,10.1C68.4,21.9,59.3,32.7,50.9,46.3C42.5,59.9,34.9,76.4,24.4,76.3C14,76.2,0.7,59.6,-10.9,50.2C-22.6,40.9,-32.5,38.8,-45,33.8C-57.5,28.7,-72.6,20.7,-74.5,10.4C-76.4,0.2,-65.1,-12.2,-55.4,-22C-45.7,-31.8,-37.7,-39,-28.8,-46.9C-19.8,-54.7,-9.9,-63.2,2.8,-67.5C15.4,-71.8,30.9,-71.9,40.8,-64.5Z" transform="translate(100 100)" />
     </svg>
 
-    
+    <svg id="svg2" viewBox="-50 50 300 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FA4D56" d="M31.5,-34.7C38.7,-31.5,40.9,-19.6,46.7,-5.4C52.6,8.7,62,24.9,56.8,31.7C51.6,38.5,31.8,35.8,14.8,43.1C-2.2,50.4,-16.6,67.6,-27.3,67.1C-38,66.6,-45.1,48.4,-45,33.3C-44.8,18.3,-37.4,6.5,-34.3,-5.1C-31.1,-16.7,-32.2,-28.2,-27.1,-31.7C-22.1,-35.2,-11.1,-30.9,0.5,-31.6C12.2,-32.2,24.3,-37.9,31.5,-34.7Z" transform="translate(100 100)" />
+        <svg viewBox="-0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FA4D56" d="M18.7,-11.8C26.2,2.4,35.9,14.3,33.1,22.3C30.4,30.2,15.2,34.1,4.9,31.3C-5.3,28.4,-10.6,18.8,-13.5,10.8C-16.4,2.8,-16.8,-3.6,-14.1,-14.9C-11.5,-26.1,-5.7,-42.3,-0.1,-42.3C5.5,-42.2,11.1,-25.9,18.7,-11.8Z" transform="translate(100 100)" />
+        </svg>     
+    </svg>
       
     <div class="col-8 p-4 cardAcudits2">
         <div class="card-body text-center">
@@ -39,8 +42,10 @@
                 <img class="emojis" src="media/laughing.png" onclick="nota(3)">
             </div>
             <div class="card-text botoExterior">
-                <p onclick="segAcudit()">Següent Acudit</p>
+                <div id="botoExterior2" onclick="segAcudit()">
+                <p>Següent Acudit</p>
                 <img id="boto" src="media/toppng.com-free-download-yellow-paint-stroke-1142x287.png">
+                </div>
             </div>
         </div>
     </div>

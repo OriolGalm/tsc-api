@@ -18,6 +18,8 @@ function segAcudit() {
             let comit = yield response.json();
             resposta = comit.attachments[0].fallback;
             document.getElementById("textAcudit").innerHTML = resposta;
+            document.getElementById("svg1").style.display = "block";
+            document.getElementById("svg2").style.display = "none";
             canvi = !canvi;
         }
         else {
@@ -25,6 +27,8 @@ function segAcudit() {
             let comit2 = yield responseChuck.json();
             resposta = comit2.value;
             document.getElementById("textAcudit").innerHTML = resposta;
+            document.getElementById("svg1").style.display = "none";
+            document.getElementById("svg2").style.display = "block";
             canvi = !canvi;
         }
     });

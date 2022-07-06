@@ -54,10 +54,18 @@ h3{
 p{
     position: absolute;
     top:10px;
-    left:42%;
+    left:25%;
     z-index: 2;
     cursor: pointer;
 }
-.botoExterior{
+#botoExterior2{
     position: relative;
+    width:220px;
+    margin:0px auto
+}
+#svg1{
+    display: block;
+}
+#svg2{
+    display: none;
 }

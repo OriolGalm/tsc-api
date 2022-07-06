@@ -8,12 +8,16 @@ async function segAcudit(){
         let comit = await response.json();
         resposta = comit.attachments[0].fallback;
         document.getElementById("textAcudit")!.innerHTML = resposta;
+        document.getElementById("svg1")!.style.display = "block";
+        document.getElementById("svg2")!.style.display = "none";
         canvi = !canvi;
     }else{
         let responseChuck: any = await fetch('https://api.chucknorris.io/jokes/random');
         let comit2 = await responseChuck.json();
         resposta = comit2.value;
         document.getElementById("textAcudit")!.innerHTML = resposta;
+        document.getElementById("svg1")!.style.display = "none";
+        document.getElementById("svg2")!.style.display = "block";
         canvi = !canvi;
     }
 }

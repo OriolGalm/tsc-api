@@ -50,8 +50,11 @@ function elTemps() {
         let tempsK = comit.main.temp;
         let tempsC = tempsK - 273.15;
         let tempsCelsius = tempsC.toFixed(1);
-        let weather = comit.weather[0].description;
-        document.getElementById("temps").innerHTML = weather + " " + tempsCelsius.toString() + " °C";
-        console.log("Temperatura: ", tempsC.toFixed(1) + weather);
+        //let weather: string = comit.weather[0].icon;
+        let responseIcon = yield fetch(`http://openweathermap.org/img/wn/10d@2x.png`);
+        let responseJson = JSON.stringify(responseIcon);
+        let comitIcon = yield { responseJson };
+        document.getElementById("temps").innerHTML = comitIcon + " " + tempsCelsius.toString() + " °C";
+        console.log("Temperatura: ", tempsC.toFixed(1) + responseIcon);
     });
 }

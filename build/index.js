@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 let notaAcudits = [];
 let resposta;
 let canvi = true;
+segAcudit();
 function segAcudit() {
     return __awaiter(this, void 0, void 0, function* () {
         if (canvi == true) {
@@ -41,6 +42,7 @@ function nota(nota) {
     };
     notaAcudits.push(acuditsObj);
     console.log("Array: ", notaAcudits);
+    segAcudit();
 }
 elTemps();
 function elTemps() {
@@ -50,11 +52,9 @@ function elTemps() {
         let tempsK = comit.main.temp;
         let tempsC = tempsK - 273.15;
         let tempsCelsius = tempsC.toFixed(1);
-        //let weather: string = comit.weather[0].icon;
-        let responseIcon = yield fetch(`http://openweathermap.org/img/wn/10d@2x.png`);
-        let responseJson = JSON.stringify(responseIcon);
-        let comitIcon = yield { responseJson };
-        document.getElementById("temps").innerHTML = comitIcon + " " + tempsCelsius.toString() + " °C";
-        console.log("Temperatura: ", tempsC.toFixed(1) + responseIcon);
+        let weather = comit.weather[0].icon;
+        document.getElementById("temps").innerHTML =
+            "<img src='http://openweathermap.org/img/wn/" + weather + "@2x.png'>" + " " + tempsCelsius.toString() + " °C";
+        console.log("Temperatura: ", tempsC.toFixed(1) + weather);
     });
 }

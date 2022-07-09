@@ -2,6 +2,7 @@ let notaAcudits: any[] = [];
 let resposta: any;
 let canvi: boolean = true;
 
+segAcudit();
 async function segAcudit(){
     if(canvi == true){
         let response: any = await fetch('https://icanhazdadjoke.com/slack');
@@ -30,6 +31,7 @@ function nota(nota: number){
     };
     notaAcudits.push(acuditsObj);
     console.log("Array: ",  notaAcudits);
+    segAcudit();
 }
 
 elTemps();
@@ -39,10 +41,8 @@ async function elTemps(){
     let tempsK: number = comit.main.temp;
     let tempsC: number = tempsK -273.15;
     let tempsCelsius: any = tempsC.toFixed(1);
-    //let weather: string = comit.weather[0].icon;
-    let responseIcon: any = await fetch(`http://openweathermap.org/img/wn/10d@2x.png`);
-    let responseJson: any = JSON.stringify(responseIcon);
-    let comitIcon: any = await {responseJson};
-    document.getElementById("temps")!.innerHTML =   comitIcon + " " + tempsCelsius.toString() + " °C";
-    console.log("Temperatura: ", tempsC.toFixed(1) + responseIcon); 
+    let weather: string = comit.weather[0].icon;
+    document.getElementById("temps")!.innerHTML =  
+    "<img src='http://openweathermap.org/img/wn/" + weather + "@2x.png'>" + " " + tempsCelsius.toString() + " °C";
+    console.log("Temperatura: ", tempsC.toFixed(1) + weather); 
 }

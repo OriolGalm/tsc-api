@@ -40,6 +40,9 @@ h3{
 #temps{
     padding: 10px;
 }
+#temps>img{
+    width:40px;
+}
 .emojis{
     width: 30px;
     height: 30px;
